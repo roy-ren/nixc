@@ -1,10 +1,14 @@
-{ flake, pkgs, lib, config, ... }:
-let
+{
+  flake,
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   inherit (flake) inputs;
   inherit (inputs) self;
   inherit (flake.config) me;
-in
-{
+in {
   imports = [
     self.homeModules.default
   ];
@@ -19,6 +23,10 @@ in
   ];
 
   home.username = me.username;
-  home.homeDirectory = lib.mkDefault "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/${me.username}";
+  home.homeDirectory = lib.mkDefault "/${
+    if pkgs.stdenv.isDarwin
+    then "Users"
+    else "home"
+  }/${me.username}";
   home.stateVersion = "24.11";
 }

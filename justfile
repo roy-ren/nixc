@@ -19,12 +19,22 @@ lint:
 # Check nix flake
 [group('dev')]
 check:
-  nix flake check --all-systems
+  nix flake check --all-systems --show-trace
 
 # Manually enter dev shell
 [group('dev')]
 dev:
   nix develop
+
+# Show flake output
+[group('dev')]
+show:
+  nix flake show
+
+# Show flake output all systems
+[group('dev')]
+show-all:
+  nix flake show --all-systems
 
 # Activate the configuration
 [group('Main')]

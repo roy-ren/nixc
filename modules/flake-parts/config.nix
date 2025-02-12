@@ -1,8 +1,7 @@
-{ lib, ... }:
-{
+{lib, ...}: {
   options = {
     me = lib.mkOption {
-      default = { };
+      default = {};
       type = lib.types.submodule {
         options = {
           username = lib.mkOption {
@@ -17,7 +16,7 @@
           };
           email = lib.mkOption {
             type = lib.types.str;
-            default = "johndoe@nixpad.com";
+            default = "royite.ren@gmail.com";
             description = "Your email for use in Git config";
           };
         };
