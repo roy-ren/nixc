@@ -1,6 +1,8 @@
 {
   imports = [
-    ./gnome.nix
+    ./display.nix
+    ./fonts.nix
+    # ./gnome.nix
   ];
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 }
