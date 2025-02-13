@@ -4,4 +4,6 @@
     map
     (fn: ./${fn})
     (filter (fn: fn != "default.nix") (attrNames (readDir ./.)));
+
+  services.dotfiles.enable = true;
 }

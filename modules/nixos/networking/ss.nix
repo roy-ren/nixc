@@ -1,8 +1,7 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
+{ lib
+, config
+, pkgs
+, ...
 }: {
   options.ss = {
     enable = lib.mkOption {
@@ -20,7 +19,7 @@
   config = lib.mkIf config.ss.enable {
     systemd.services.ss = {
       description = "Shadowsocks Service";
-      wantedBy = ["multi-user.target"];
+      wantedBy = [ "multi-user.target" ];
       serviceConfig = {
         ExecStart = "${pkgs.shadowsocks-rust}/bin/sslocal -c ${config.ss.configFile}";
         Restart = "always";

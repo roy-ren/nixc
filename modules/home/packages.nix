@@ -1,8 +1,28 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  dotfiles = "${config.home.homeDirectory}/nixconfig/modules/home/dotfiles";
+in {
   # Nix packages to install to $HOME
   #
   # Search for packages here: https://search.nixos.org/packages
   home.packages = with pkgs; [
+    cmake
+    clang
+    flutter
+    firefox
+    glxinfo
+    lazygit
+    neofetch
+    pkg-config
+    gtk4
+    ninja
+    unzip
+    zip
+    just
+
     # Unix tools
     ripgrep # Better `grep`
     fd
@@ -26,15 +46,27 @@
   programs = {
     # Better `cat`
     bat.enable = true;
-    # Type `<ctrl> + r` to fuzzy search your shell history
-    fzf.enable = true;
-    jq.enable = true;
     # Install btop https://github.com/aristocratos/btop
     btop.enable = true;
+
+    fzf.enable = true;
+
+    ghostty.enable = true;
+
+    jq.enable = true;
+
+    # Type `<ctrl> + r` to fuzzy search your shell history
+    starship = {
+      enable = true;
+    };
+
     # Tmate terminal sharing.
     tmate = {
       enable = true;
+
       #host = ""; #In case you wish to use a server other than tmate.io
     };
+
+    zoxide.enable = true;
   };
 }

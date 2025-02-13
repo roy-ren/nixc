@@ -1,10 +1,12 @@
 # See /modules/darwin/* for actual settings
 # This file is just *top-level* configuration.
-{flake, ...}: let
+{ flake, ... }:
+let
   inherit (flake) inputs;
   inherit (inputs) self;
   inherit (flake.config) me;
-in {
+in
+{
   imports = [
     self.darwinModules.default
   ];
@@ -26,7 +28,7 @@ in {
 
     # Enable home-manager for our user
     users."${me.username}" = {
-      imports = [(self + /configurations/home/${me.username}.nix)];
+      imports = [ (self + /configurations/home/${me.username}.nix) ];
     };
   };
 

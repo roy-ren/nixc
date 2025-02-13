@@ -12,6 +12,7 @@
   inherit (flake) inputs;
 in {
   imports = [
+    inputs.auto-cpufreq.nixosModules.default
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-12th-gen
 
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -20,9 +21,14 @@ in {
     ./bluetooth.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod"];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "thunderbolt"
+    "nvme"
+    "usb_storage"
+    "sd_mod"
+  ];
+
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 

@@ -1,7 +1,7 @@
 {
+  config,
   lib,
   pkgs,
-  config,
   ...
 }: let
   # path = "${config.home.homeDirectory}/nixc/home/modules/ui/wallpapers";
@@ -23,12 +23,14 @@ in {
     withUWSM = true;
   };
 
+  programs.waybar.enable = true;
+
   programs.regreet = {
     enable = true;
-    # font = {
-    #   size = 14;
-    #   name = "FiraCode";
-    # };
+    font = {
+      size = 14;
+      name = "FiraCode";
+    };
     cageArgs = ["-s" "-m" "last"];
     settings = {
       background = {
