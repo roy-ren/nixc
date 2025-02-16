@@ -15,6 +15,7 @@ in {
   ];
 
   # Enable home-manager for our user
+  home-manager.backupFileExtension = "backup";
   home-manager.users."${me.username}" = {
     imports = [(self + /configurations/home/${me.username}.nix)];
   };

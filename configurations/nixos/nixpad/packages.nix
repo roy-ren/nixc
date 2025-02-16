@@ -7,5 +7,6 @@
     shadowsocks-rust
     brightnessctl
     playerctl
+    gtk4
   ];
 }
