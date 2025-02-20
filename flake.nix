@@ -31,6 +31,11 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.nixpkgs.follows = "hyprland";
+    };
+    stylix.url = "github:danth/stylix";
 
     # ThinkPad X1 Carbon hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";

@@ -51,10 +51,10 @@ return { -- Fuzzy Finder (files, lsp, etc)
         live_grep = {
           hidden = true,
         },
-        find_files = {
-          hidden = true,
-          theme = "dropdown",
-        },
+        -- find_files = {
+        --   hidden = true,
+        --   theme = "dropdown",
+        -- },
       },
       extensions = {
         ["ui-select"] = {

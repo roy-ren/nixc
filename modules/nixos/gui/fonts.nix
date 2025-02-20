@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
@@ -11,6 +15,12 @@
     nerd-fonts.fira-code
     nerd-fonts.fira-mono
     nerd-fonts.droid-sans-mono
+    nerd-fonts.ubuntu
+    nerd-fonts.ubuntu-mono
+    nerd-fonts.fantasque-sans-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.space-mono
+    nerd-fonts.mononoki
   ];
 
   fonts.fontconfig = {

@@ -1,1 +1,9 @@
-window-decoration = false
+font-size = 22
+background-blur-radius = 20
+mouse-hide-while-typing = true
+macos-option-as-alt = true
+# theme = Tomorrow Night
+theme = xcodedarkhc
+theme = SpaceGray Eighties
+# background-opacity = 0.85
+# background-blur-radius = 20 

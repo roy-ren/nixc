@@ -1,10 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
-  dotfiles = "${config.home.homeDirectory}/nixconfig/modules/home/dotfiles";
-in {
+{pkgs, ...}: {
   # Nix packages to install to $HOME
   #
   # Search for packages here: https://search.nixos.org/packages
@@ -39,6 +33,41 @@ in {
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
     less
+
+    # gui
+    blueberry
+    (mpv.override {scripts = [mpvScripts.mpris];})
+    d-spy
+    dolphin
+    kolourpaint
+    nautilus
+    icon-library
+    dconf-editor
+    qt5.qtimageformats
+    vlc
+    yad
+
+    # theming tools
+    gradience
+    gnome-tweaks
+
+    # hyprland
+    cliphist
+    fuzzel
+    grim
+    hyprpicker
+    tesseract
+    imagemagick
+    pavucontrol
+    playerctl
+    swappy
+    swaylock-effects
+    swayidle
+    slurp
+    swww
+    wayshot
+    wlsunset
+    wf-recorder
   ];
 
   # Programs natively supported by home-manager.
