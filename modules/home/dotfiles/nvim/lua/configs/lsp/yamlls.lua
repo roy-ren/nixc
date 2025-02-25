@@ -1,5 +1,3 @@
-local schemastore = require "schemastore"
-
 return {
   settings = {
     yaml = {
@@ -10,7 +8,7 @@ return {
         -- Avoid TypeError: Cannot read properties of undefined (reading 'length')
         url = "",
       },
-      schemas = schemastore.yaml.schemas(),
+      schemas = require("schemastore").yaml.schemas(),
     },
   },
 }
