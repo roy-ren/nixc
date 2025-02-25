@@ -10,7 +10,7 @@
     ...
   }: {
     # For 'nix fmt'
-    formatter = pkgs.nixpkgs-fmt;
+    formatter = pkgs.alejandra;
 
     # Enables 'nix run' to activate.
     packages.default = self'.packages.activate;

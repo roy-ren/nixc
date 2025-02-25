@@ -1,8 +1,6 @@
-{ flake, ... }:
-let
+{flake, ...}: let
   inherit (flake.config) me;
-in
-{
+in {
   home.shellAliases = {
     g = "git";
     lg = "lazygit";
@@ -14,7 +12,7 @@ in
       enable = true;
       userName = me.fullname;
       userEmail = me.email;
-      ignores = [ "*~" "*.swp" ];
+      ignores = ["*~" "*.swp"];
       aliases = {
         cb = "checkout -b";
         cm = "commit";

@@ -24,11 +24,35 @@
     tree
     gnumake
 
+    # <--- LSP
     # Nix dev
     cachix
     nil # Nix language server
     nix-info
     nixpkgs-fmt
+
+    # nix
+    alejandra
+    nixd
+    nixdoc
+
+    # json
+    vscode-langservers-extracted
+    yaml-language-server
+
+    # bash
+    bash-language-server
+    shfmt
+
+    nodejs
+
+    # lua
+    lua-language-server
+    stylua
+
+    # swift
+    sourcekit-lsp
+    # --- LSP>
 
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.

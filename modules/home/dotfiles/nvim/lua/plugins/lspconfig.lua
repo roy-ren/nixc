@@ -16,6 +16,8 @@ return {
   },
   config = function(_, opts)
     -- local blink_capabilities = require("blink.cmp").get_lsp_capabilities()
+    -- require("schemastore").setup()
+
     local lspconfig = require "lspconfig"
     local nvlsp = require "configs.lsp.nvlsp"
 
