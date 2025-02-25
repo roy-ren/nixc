@@ -4,11 +4,16 @@
       kb_options = "altwin:swap_alt_win";
       repeat_rate = 50;
       repeat_delay = 300;
+
+      # 鼠标灵敏度
+      sensitivity = 0.35;
+      follow_mouse = 1;
+
       touchpad = {
         natural_scroll = true;
         disable_while_typing = true;
         clickfinger_behavior = true;
-        scroll_factor = 0.5;
+        scroll_factor = 1.0;
       };
 
       special_fallthrough = true;

@@ -8,5 +8,6 @@
     brightnessctl
     playerctl
     gtk4
+    overskride
   ];
 }
