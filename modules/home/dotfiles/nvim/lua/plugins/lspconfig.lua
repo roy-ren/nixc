@@ -1,26 +1,34 @@
 return {
   "neovim/nvim-lspconfig",
-  config = function()
-    local nvlsp = require "configs.lsp.nvlsp"
+  dependencies = {
+    "b0o/schemastore.nvim",
+    "saghen/blink.cmp",
+  },
+  opts = {
+    servers = {
+      bashls = require "configs.lsp.bashls",
+      nixd = require "configs.lsp.nixd",
+      -- jsonls = require "configs.lsp.jsonls",
+      -- yamlls = require "configs.lsp.yamlls",
+      dartls = {},
+      lua_ls = {},
+    },
+  },
+  config = function(_, opts)
+    -- local blink_capabilities = require("blink.cmp").get_lsp_capabilities()
     local lspconfig = require "lspconfig"
+    local nvlsp = require "configs.lsp.nvlsp"
 
     nvlsp.defaults()
 
-    local servers = {
-      "lua_ls",
-      "dartls",
+    local conf = {
+      on_attach = nvlsp.on_attach,
+      on_init = nvlsp.on_init,
+      capabilities = nvlsp.capabilities,
     }
 
-    for _, lsp in ipairs(servers) do
-      lspconfig[lsp].setup {
-        on_attach = nvlsp.on_attach,
-        on_init = nvlsp.on_init,
-        capabilities = nvlsp.capabilities,
-      }
+    for server, config in pairs(opts.servers) do
+      lspconfig[server].setup(vim.tbl_deep_extend("keep", config, conf))
     end
-
-    require "configs.lsp.nix"
-    require "configs.lsp.json"
-    require "configs.lsp.bash"
   end,
 }

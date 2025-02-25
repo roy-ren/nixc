@@ -17,7 +17,17 @@ return {
       dofile(vim.g.base46_cache .. "treesitter")
     end)
 
+    ---@diagnostic disable-next-line: missing-fields
     require("nvim-treesitter.configs").setup {
+      -- Install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+
+      -- Automatically install missing parsers when entering buffer
+      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+      auto_install = true,
+
+      -- List of parsers to ignore installing (or "all")
+      ignore_install = { "javascript" },
 
       ensure_installed = {
         "lua",

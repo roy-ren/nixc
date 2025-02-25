@@ -6,6 +6,7 @@
     extraPackages = with pkgs; [
       # json
       vscode-langservers-extracted
+      yaml-language-server
 
       # bash
       bash-language-server
