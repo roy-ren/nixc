@@ -1,6 +1,6 @@
 {config, ...}: {
   xdg.configFile = let
-    dotfiles = "${config.home.homeDirectory}/nixconfig/modules/home/dotfiles";
+    dotfiles = "${config.home.homeDirectory}/nixc/modules/home/dotfiles";
     link = config.lib.file.mkOutOfStoreSymlink;
   in {
     "ghostty".source = link "${dotfiles}/ghostty";
