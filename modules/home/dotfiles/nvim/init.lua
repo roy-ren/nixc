@@ -1,5 +1,6 @@
-vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
+-- nvchad UI
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -11,27 +12,20 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local lazy = require "configs.lazy"
-
 -- load plugins
 ---@diagnostic disable-next-line: different-requires
-require("lazy").setup({
-  {
-    "NvChad/NvChad",
-    lazy = false,
-    branch = "v2.5",
-    import = "nvchad.plugins",
-  },
-  { import = "plugins" },
-}, lazy)
+require("lazy").setup {
+  -- { import = "plugins" },
+  require("plugins").specs
+}
 
--- load theme
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "statusline")
+for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
+  dofile(vim.g.base46_cache .. v)
+end
 
 require "options"
-require "autocmds"
+require "config"
 
 vim.schedule(function()
-  require "mappings"
+  require "keymaps"
 end)

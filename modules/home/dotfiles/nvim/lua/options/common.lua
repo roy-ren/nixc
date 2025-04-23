@@ -1,5 +1,3 @@
--- require "nvchad.options"
-
 local M = {}
 
 M.setup = function()
@@ -14,6 +12,13 @@ M.setup = function()
 
   -- Don't show the mode, since it's already in the status line
   vim.opt.showmode = false
+  --
+  -- 禁用折叠（默认展开所有代码）
+  vim.opt.foldmethod = "manual"
+  vim.opt.foldlevel = 99
+
+  vim.opt.softtabstop = 2
+  vim.opt.shiftwidth = 2
 
   -- Sync clipboard between OS and Neovim.
   --  Schedule the setting after `UiEnter` because it can increase startup-time.

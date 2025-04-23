@@ -10,11 +10,16 @@
   inherit (inputs) self;
   inherit (flake.config) me;
 in {
-  # Use TouchID for `sudo` authentication
-  security.pam.enableSudoTouchIdAuth = true;
 
   # These users can add Nix caches.
   nix.settings.trusted-users = ["root" me.username];
+
+  nix.enable = false;
+
+  environment.systemPackages = with pkgs; [
+    nix
+    # nix-darwin
+  ];
 
   # Configure macOS system
   # More lagoons => https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix

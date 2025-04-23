@@ -145,6 +145,7 @@ in {
       set -ga terminal-overrides ",*256col*:Tc"
       set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
       set-environment -g COLORTERM "truecolor"
+      set -g default-terminal "tmux-256color"  # 与 $TERM 一致
 
       set -g detach-on-destroy off     # don't exit from tmux when closing a session
       set -g renumber-windows on       # renumber all windows when any window is closed

@@ -7,11 +7,11 @@
     clang
     flutter
     firefox
-    glxinfo
+    # glxinfo
     lazygit
     neofetch
     pkg-config
-    gtk4
+    # gtk4
     ninja
     unzip
     zip
@@ -56,42 +56,42 @@
 
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
-    less
+    # less
 
     # gui
-    blueberry
-    (mpv.override {scripts = [mpvScripts.mpris];})
-    d-spy
-    dolphin
-    kolourpaint
-    nautilus
-    icon-library
-    dconf-editor
-    qt5.qtimageformats
-    vlc
-    yad
+    # blueberry
+    # (mpv.override {scripts = [mpvScripts.mpris];})
+    # d-spy
+    # dolphin
+    # kolourpaint
+    # nautilus
+    # icon-library
+    # dconf-editor
+    # qt5.qtimageformats
+    # vlc
+    # yad
 
     # theming tools
-    gradience
-    gnome-tweaks
+    # gradience
+    # gnome-tweaks
 
     # hyprland
-    cliphist
-    fuzzel
-    grim
-    hyprpicker
-    tesseract
-    imagemagick
-    pavucontrol
-    playerctl
-    swappy
-    swaylock-effects
-    swayidle
-    slurp
-    swww
-    wayshot
-    wlsunset
-    wf-recorder
+    # cliphist
+    # fuzzel
+    # grim
+    # hyprpicker
+    # tesseract
+    # imagemagick
+    # pavucontrol
+    # playerctl
+    # swappy
+    # swaylock-effects
+    # swayidle
+    # slurp
+    # swww
+    # wayshot
+    # wlsunset
+    # wf-recorder
   ];
 
   # Programs natively supported by home-manager.
@@ -104,7 +104,7 @@
 
     fzf.enable = true;
 
-    ghostty.enable = true;
+    # ghostty.enable = true;
 
     jq.enable = true;
 
