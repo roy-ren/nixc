@@ -44,7 +44,8 @@
     bash-language-server
     shfmt
 
-    nodejs
+    yarn
+    nodejs_latest
 
     # lua
     lua-language-server
