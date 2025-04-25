@@ -55,10 +55,12 @@
     latex2html
     latex2mathml
     tectonic
+    tmux
 
     # swift
     sourcekit-lsp
     # --- LSP>
+    # tmux
 
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
@@ -103,31 +105,15 @@
   # Programs natively supported by home-manager.
   # They can be configured in `programs.*` instead of using home.packages.
   programs = {
-    # Better `cat`
     bat.enable = true;
-    # Install btop https://github.com/aristocratos/btop
     btop.enable = true;
-
     fzf.enable = true;
-
     # ghostty.enable = true;
-
+    # tmux.enable = true;
     jq.enable = true;
-
-    # Type `<ctrl> + r` to fuzzy search your shell history
-    starship = {
-      enable = true;
-    };
-
-    # Tmate terminal sharing.
-    tmate = {
-      enable = true;
-
-      #host = ""; #In case you wish to use a server other than tmate.io
-    };
-
+    starship.enable = true;
+    tmate.enable = true;
     zoxide.enable = true;
-
     nushell.enable = true;
   };
 }

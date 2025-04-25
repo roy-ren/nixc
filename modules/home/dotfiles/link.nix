@@ -6,6 +6,7 @@
     "ghostty".source = link "${dotfiles}/ghostty";
     "nushell".source = link "${dotfiles}/nushell";
     "nvim".source = link "${dotfiles}/nvim";
+    "tmux".source = link "${dotfiles}/tmux";
     "starship.toml".source = link "${dotfiles}/starship.toml";
   };
 }

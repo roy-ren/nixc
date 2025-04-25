@@ -46,7 +46,7 @@
         target = "clipboard";
       };
 
-      smb.ServerDescription = "lagoon";
+      # smb.ServerDescription = "lagoon";
 
       CustomSystemPreferences = {
       };
