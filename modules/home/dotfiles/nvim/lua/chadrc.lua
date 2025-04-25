@@ -1,12 +1,12 @@
 local options = {
   base46 = {
-    theme = "vscode_dark", -- default theme
+    theme = "tokyodark", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
-    transparency = false,
-    theme_toggle = { "vscode_dark", "one_light" },
+    transparency = true,
+    theme_toggle = { "tokyodark", "one_light" },
   },
 
   ui = {

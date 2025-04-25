@@ -54,7 +54,7 @@ local function find_plugin_specs()
 
     -- 生成 Lazy 规范
     table.insert(specs, { import = "plugins." .. mod_path })
-    log(2, "Discovered plugin spec: plugins." .. mod_path)
+    -- log(2, "Discovered plugin spec: plugins." .. mod_path)
   end
 
   handle:close()

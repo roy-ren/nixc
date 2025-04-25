@@ -49,6 +49,11 @@
     # lua
     lua-language-server
     stylua
+    luarocks
+    tree-sitter
+    latex2html
+    latex2mathml
+    tectonic
 
     # swift
     sourcekit-lsp
