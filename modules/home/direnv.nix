@@ -2,6 +2,7 @@
   # https://nixos.asia/en/direnv
   programs.direnv = {
     enable = true;
+    enableNushellIntegration = true;
     nix-direnv = {
       enable = true;
     };

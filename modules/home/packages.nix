@@ -111,9 +111,14 @@
     # ghostty.enable = true;
     # tmux.enable = true;
     jq.enable = true;
-    starship.enable = true;
+    starship = {
+      enable = true;
+      # enableNushellIntegration = true;
+    };
     tmate.enable = true;
-    zoxide.enable = true;
-    nushell.enable = true;
+    zoxide = {
+      enable = true;
+      enableNushellIntegration = true;
+    };
   };
 }

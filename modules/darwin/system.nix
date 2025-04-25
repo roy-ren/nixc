@@ -26,9 +26,9 @@
         QuitMenuItem = true; # enable quit menu item
         ShowPathbar = true; # show path bar
         ShowStatusBar = true; # show status bar
-        ShowExternalHardDrivesOnDesktop = true;
+        # ShowExternalHardDrivesOnDesktop = true;
         # ShowHardDrivesOnDesktop = true;
-        ShowRemovableMediaOnDesktop = true;
+        # ShowRemovableMediaOnDesktop = true;
       };
 
       loginwindow = {
@@ -72,14 +72,14 @@
           HIDKeyboardModifierMappingSrc = 30064771129;
           HIDKeyboardModifierMappingDst = 30064771296;
         }
-        {
-          HIDKeyboardModifierMappingSrc = 30064771114;
-          HIDKeyboardModifierMappingDst = 30064771121;
-        }
-        {
-          HIDKeyboardModifierMappingSrc = 30064771121;
-          HIDKeyboardModifierMappingDst = 30064771114;
-        }
+        # {
+        #   HIDKeyboardModifierMappingSrc = 30064771114;
+        #   HIDKeyboardModifierMappingDst = 30064771121;
+        # }
+        # {
+        #   HIDKeyboardModifierMappingSrc = 30064771121;
+        #   HIDKeyboardModifierMappingDst = 30064771114;
+        # }
       ];
     };
   };

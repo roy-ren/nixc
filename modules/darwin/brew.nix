@@ -29,7 +29,7 @@ in {
       "input-source-pro"
       "chatgpt"
       "shadowsocksx-ng"
-
+      "karabiner-elements"
       # fonts
       "font-fira-code"
       "font-fira-code-nerd-font"
@@ -43,6 +43,7 @@ in {
 
     masApps = {
       Xcode = 497799835;
+      # dingding = 1435447041;
     };
   };
   nix-homebrew = {
