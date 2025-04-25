@@ -26,7 +26,9 @@ in {
     prefix = "C-a";
     resizeAmount = 4;
     sensibleOnTop = true;
-    shell = "${pkgs.fish}/bin/fish";
+    # shell = "${pkgs.fish}/bin/fish";
+    shell = "${pkgs.nushell}/bin/nu";
+    # shell = "/etc/profiles/per-user/roy/bin/fish";
     shortcut = "a";
     terminal = "tmux-256color";
     tmuxinator.enable = true;

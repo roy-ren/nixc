@@ -1,6 +1,10 @@
 # See /modules/darwin/* for actual settings
 # This file is just *top-level* configuration.
-{flake, ...}: let
+{
+  flake,
+  pkgs,
+  ...
+}: let
   inherit (flake) inputs;
   inherit (inputs) self;
   inherit (flake.config) me;
@@ -12,9 +16,14 @@ in {
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.hostName = "lagoon";
 
+  programs.fish.enable = true;
+
   # For home-manager to work.
   # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565487545
-  users.users."${me.username}".home = "/Users/${me.username}";
+  users.users."${me.username}" = {
+    home = "/Users/${me.username}";
+    shell = pkgs.nushell;
+  };
 
   home-manager = {
     # Automatically move old dotfiles out of the way
@@ -29,6 +38,13 @@ in {
       imports = [(self + /configurations/home/${me.username}.nix)];
     };
   };
+
+  environment.shells = [
+    pkgs.bashInteractive
+    pkgs.zsh
+    pkgs.fish
+    pkgs.nushell
+  ];
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog

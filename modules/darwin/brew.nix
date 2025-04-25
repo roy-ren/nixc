@@ -7,19 +7,44 @@ in {
     nix-homebrew.darwinModules.nix-homebrew
   ];
 
-  homebrew.enable = true;
-  homebrew.brews = [
-    "imagemagick"
-  ];
-  homebrew.caskArgs.language = "zh-CN";
-  homebrew.casks = [
-    "google-chrome"
-    "ghostty"
-  ];
-  homebrew.masApps = {
-    # Xcode = 497799835;
-  };
+  homebrew = {
+    enable = true;
+    caskArgs.language = "zh-CN";
 
+    brews = [
+      "imagemagick"
+      # iOS
+      "cocoapods"
+      "swift-format"
+      "swiftlint"
+    ];
+
+    casks = [
+      "google-chrome"
+      "ghostty"
+      "raycast"
+      "rectangle"
+      "proxyman"
+      "xcodes"
+      "input-source-pro"
+      "chatgpt"
+      "shadowsocksx-ng"
+
+      # fonts
+      "font-fira-code"
+      "font-fira-code-nerd-font"
+      "font-droid-sans-mono-nerd-font"
+      "font-hack-nerd-font"
+    ];
+
+    taps = [
+      # "leoafarias/fvm"
+    ];
+
+    masApps = {
+      Xcode = 497799835;
+    };
+  };
   nix-homebrew = {
     # Install Homebrew under the default prefix
     enable = true;

@@ -121,5 +121,7 @@
     };
 
     zoxide.enable = true;
+
+    nushell.enable = true;
   };
 }

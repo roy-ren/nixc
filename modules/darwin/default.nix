@@ -9,10 +9,12 @@
 in {
   imports = [
     ./brew.nix
+    ./service.nix
     ./system.nix
   ];
 
   nix.settings.trusted-users = ["root" me.username];
   nix.enable = false;
+
   environment.systemPackages = with pkgs; [nix];
 }

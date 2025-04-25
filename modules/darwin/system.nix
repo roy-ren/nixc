@@ -11,6 +11,10 @@
         wvous-bl-corner = 3; # bottom-left - Application Windows
         wvous-br-corner = 4; # bottom-right - Desktop
       };
+      trackpad = {
+        Clicking = true;
+        TrackpadThreeFingerDrag = true;
+      };
 
       finder = {
         _FXShowPosixPathInTitle = true; # show full path in finder title
@@ -19,6 +23,20 @@
         QuitMenuItem = true; # enable quit menu item
         ShowPathbar = true; # show path bar
         ShowStatusBar = true; # show status bar
+      };
+      CustomSystemPreferences = {
+      };
+      CustomUserPreferences = {
+      };
+      NSGlobalDomain = {
+        AppleInterfaceStyle = "Dark";
+        AppleShowAllExtensions = true;
+        InitialKeyRepeat = 15;
+        KeyRepeat = 2;
+        AppleFontSmoothing = 1;
+        NSAutomaticSpellingCorrectionEnabled = false;
+        NSTableViewDefaultSizeMode = 1;
+        AppleEnableSwipeNavigateWithScrolls = true; # 启用三指拖移功能
       };
     };
 

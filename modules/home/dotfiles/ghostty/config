@@ -1,9 +1,24 @@
-font-size = 17
+# font
+font-family = "DroidSansM Nerd Font Mono"
+# font-family = "FiraCode Nerd Font Mono"
+font-size = 14
+
+# keys
 mouse-hide-while-typing = true
 macos-option-as-alt = true
+
+# theme
 theme = Tomorrow Night
 # theme = xcodedarkhc
 # theme = SpaceGray Eighties
-background-opacity = 0.75
+
+# background
+background-opacity = 0.65
 background-blur-radius = 20 
+
+
+# Window
 window-decoration = none
+
+# shell
+# shell-integration = nu
