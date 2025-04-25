@@ -8,9 +8,9 @@ mouse-hide-while-typing = true
 macos-option-as-alt = true
 
 # theme
-theme = Tomorrow Night
+# theme = Tomorrow Night
 # theme = xcodedarkhc
-# theme = SpaceGray Eighties
+theme = SpaceGray Eighties
 
 # background
 background-opacity = 0.65
