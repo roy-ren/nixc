@@ -1,12 +1,12 @@
 local options = {
   base46 = {
-    theme = "tokyodark", -- default theme
+    theme = "vscode_dark", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
     transparency = true,
-    theme_toggle = { "tokyodark", "one_light" },
+    theme_toggle = { "vscode_dark", "one_light" },
   },
 
   ui = {
@@ -20,6 +20,7 @@ local options = {
       },
     },
 
+    hl_override = { Comment = { italic = true } },
     telescope = { style = "borderless" }, -- borderless / bordered
 
     statusline = {

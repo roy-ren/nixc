@@ -2,6 +2,7 @@
 font-family = "DroidSansM Nerd Font Mono"
 # font-family = "FiraCode Nerd Font Mono"
 font-size = 14
+adjust-cell-height = 15%
 
 # keys
 mouse-hide-while-typing = true
@@ -19,6 +20,8 @@ background-blur-radius = 20
 
 # Window
 window-decoration = none
+window-padding-x = 4,4
+window-padding-y = 0,0
 
 # shell
 # shell-integration = nu
