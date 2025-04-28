@@ -1,11 +1,27 @@
 {flake, ...}: let
+  inherit (flake.config) me;
   inherit (flake.inputs) nix-homebrew;
   inherit (flake.inputs) homebrew-core;
   inherit (flake.inputs) homebrew-cask;
+  inherit (flake.inputs) leoafarias-taps;
 in {
   imports = [
     nix-homebrew.darwinModules.nix-homebrew
   ];
+
+  nix-homebrew = {
+    enable = true;
+    enableRosetta = true;
+    user = me.username;
+    taps = {
+      "homebrew/homebrew-core" = homebrew-core;
+      "homebrew/homebrew-cask" = homebrew-cask;
+      "homebrew/homebrew-fvm" = leoafarias-taps;
+    };
+
+    mutableTaps = false;
+    autoMigrate = true;
+  };
 
   homebrew = {
     enable = true;
@@ -17,6 +33,7 @@ in {
       "cocoapods"
       "swift-format"
       "swiftlint"
+      # "fvm"
     ];
 
     casks = [
@@ -39,32 +56,12 @@ in {
 
     taps = [
       # "leoafarias/fvm"
+      # "laishulu/macism"
     ];
 
     masApps = {
       Xcode = 497799835;
       # dingding = 1435447041;
     };
-  };
-  nix-homebrew = {
-    # Install Homebrew under the default prefix
-    enable = true;
-
-    # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-    enableRosetta = true;
-
-    # User owning the Homebrew prefix
-    user = "roy";
-
-    # Optional: Declarative tap management
-    taps = {
-      "homebrew/homebrew-core" = homebrew-core;
-      "homebrew/homebrew-cask" = homebrew-cask;
-    };
-
-    # Optional: Enable fully-declarative tap management
-    #
-    # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-    mutableTaps = false;
   };
 }

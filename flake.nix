@@ -35,6 +35,10 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    leoafarias-taps = {
+      url = "github:leoafarias/homebrew-fvm";
+      flake = false;
+    };
   };
 
   # Wired using https://nixos-unified.org/autowiring.html

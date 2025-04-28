@@ -39,4 +39,4 @@ show-all:
 # Activate the configuration
 [group('Main')]
 run:
-  nix run
+  darwin-rebuild switch --flake ./#lagoon
