@@ -36,7 +36,15 @@
       flake = false;
     };
     homebrew-fvm = {
-      url = "github:leoafarias/homebrew-fvm";
+      url = "github:leoafarias/fvm";
+      flake = false;
+    };
+    homebrew-im = {
+      url = "github:daipeihust/im-select";
+      flake = false;
+    };
+    homebrew-macism = {
+      url = "github:laishulu/macism";
       flake = false;
     };
   };

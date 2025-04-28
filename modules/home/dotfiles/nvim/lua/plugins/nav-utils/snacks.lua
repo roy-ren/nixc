@@ -451,7 +451,7 @@ return {
       mode = { "n", "v" },
     },
     {
-      "<leader>gg",
+      "lg",
       function()
         Snacks.lazygit()
       end,

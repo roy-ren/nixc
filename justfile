@@ -36,7 +36,6 @@ show:
 show-all:
   nix flake show --all-systems
 
-# Activate the configuration
 [group('Main')]
 run:
-  darwin-rebuild switch --flake ./#lagoon
+  darwin-rebuild switch --flake ./#lagoon --show-trace

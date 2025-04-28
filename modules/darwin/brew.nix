@@ -4,13 +4,10 @@
   ...
 }: let
   inherit (flake.config) me;
-  inherit (flake.inputs) nix-homebrew;
-  inherit (flake.inputs) homebrew-core;
-  inherit (flake.inputs) homebrew-cask;
-  inherit (flake.inputs) homebrew-fvm;
+  inherit (flake) inputs;
 in {
   imports = [
-    nix-homebrew.darwinModules.nix-homebrew
+    inputs.nix-homebrew.darwinModules.nix-homebrew
   ];
 
   nix-homebrew = {
@@ -18,11 +15,11 @@ in {
     enableRosetta = true;
     user = me.username;
     taps = {
-      "homebrew/homebrew-core" = homebrew-core;
-      "homebrew/homebrew-cask" = homebrew-cask;
-      "leoafarias/fvm" = homebrew-fvm;
-      # "leoafarias/fvm"
-      # "laishulu/macism"
+      "homebrew/homebrew-core" = inputs.homebrew-core;
+      "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "leoafarias/fvm" = inputs.homebrew-fvm;
+      "daipeihust/tap" = inputs.homebrew-im;
+      "laishulu/homebrew" = inputs.homebrew-macism;
     };
 
     mutableTaps = true;
@@ -40,12 +37,12 @@ in {
     taps = builtins.attrNames config.nix-homebrew.taps;
 
     brews = [
-      "imagemagick"
-      # iOS
       "cocoapods"
       "swift-format"
       "swiftlint"
       "fvm"
+      "im-select"
+      "macism"
     ];
 
     caskArgs.language = "zh-CN";

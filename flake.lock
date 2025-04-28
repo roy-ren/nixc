@@ -90,16 +90,48 @@
     "homebrew-fvm": {
       "flake": false,
       "locked": {
-        "lastModified": 1724678580,
-        "narHash": "sha256-DqRmApxkC+w2sVdNizgoxA/gULfsRE+HFUxO/cJTnCk=",
+        "lastModified": 1745258884,
+        "narHash": "sha256-6CES0Xx7Hht3Q+UXsmW+C1lvR514oJNHfN+P18B5V9Q=",
         "owner": "leoafarias",
-        "repo": "homebrew-fvm",
-        "rev": "67a0db0a2f9252b91be6a61584a540af8b249334",
+        "repo": "fvm",
+        "rev": "00b73c85948ad57677738ebf9716fafd1b1286d5",
         "type": "github"
       },
       "original": {
         "owner": "leoafarias",
-        "repo": "homebrew-fvm",
+        "repo": "fvm",
+        "type": "github"
+      }
+    },
+    "homebrew-im": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688943475,
+        "narHash": "sha256-NQakn0Xa177Efx6G6eaKL+wHdNh+k30SN0618nV69b4=",
+        "owner": "daipeihust",
+        "repo": "im-select",
+        "rev": "9cd5278b185a9d6daa12ba35471ec2cc1a2e3012",
+        "type": "github"
+      },
+      "original": {
+        "owner": "daipeihust",
+        "repo": "im-select",
+        "type": "github"
+      }
+    },
+    "homebrew-macism": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744812311,
+        "narHash": "sha256-w8kHjBAtw1UEZ7laHj3IJ1nM0/T+ShTmQNmZXgiMyiI=",
+        "owner": "laishulu",
+        "repo": "macism",
+        "rev": "679574ad4b9c23b5128ec89a579bd304cd623200",
+        "type": "github"
+      },
+      "original": {
+        "owner": "laishulu",
+        "repo": "macism",
         "type": "github"
       }
     },
@@ -263,6 +295,8 @@
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "homebrew-fvm": "homebrew-fvm",
+        "homebrew-im": "homebrew-im",
+        "homebrew-macism": "homebrew-macism",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nix-index-database": "nix-index-database",
