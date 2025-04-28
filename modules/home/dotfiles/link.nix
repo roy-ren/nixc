@@ -4,7 +4,7 @@
     link = config.lib.file.mkOutOfStoreSymlink;
   in {
     "ghostty".source = link "${dotfiles}/ghostty";
-    "nushell".source = link "${dotfiles}/nushell";
+    "nushell/aliases.nu".source = link "${dotfiles}/nushell/aliases.nu";
     "nvim".source = link "${dotfiles}/nvim";
     "tmux".source = link "${dotfiles}/tmux";
     "starship.toml".source = link "${dotfiles}/starship.toml";
