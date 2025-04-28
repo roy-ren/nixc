@@ -35,7 +35,7 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
-    leoafarias-taps = {
+    homebrew-fvm = {
       url = "github:leoafarias/homebrew-fvm";
       flake = false;
     };

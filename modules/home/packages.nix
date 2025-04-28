@@ -5,8 +5,8 @@
   home.packages = with pkgs; [
     cmake
     clang
-    flutter
-    firefox
+    # flutter
+    # firefox
     # glxinfo
     lazygit
     neofetch

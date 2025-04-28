@@ -1,9 +1,13 @@
-{flake, ...}: let
+{
+  flake,
+  config,
+  ...
+}: let
   inherit (flake.config) me;
   inherit (flake.inputs) nix-homebrew;
   inherit (flake.inputs) homebrew-core;
   inherit (flake.inputs) homebrew-cask;
-  inherit (flake.inputs) leoafarias-taps;
+  inherit (flake.inputs) homebrew-fvm;
 in {
   imports = [
     nix-homebrew.darwinModules.nix-homebrew
@@ -16,16 +20,24 @@ in {
     taps = {
       "homebrew/homebrew-core" = homebrew-core;
       "homebrew/homebrew-cask" = homebrew-cask;
-      "homebrew/homebrew-fvm" = leoafarias-taps;
+      "leoafarias/fvm" = homebrew-fvm;
+      # "leoafarias/fvm"
+      # "laishulu/macism"
     };
 
-    mutableTaps = false;
-    autoMigrate = true;
+    mutableTaps = true;
+    autoMigrate = false;
   };
 
   homebrew = {
     enable = true;
-    caskArgs.language = "zh-CN";
+    onActivation = {
+      autoUpdate = false;
+      upgrade = false;
+      cleanup = "zap";
+    };
+
+    taps = builtins.attrNames config.nix-homebrew.taps;
 
     brews = [
       "imagemagick"
@@ -33,9 +45,10 @@ in {
       "cocoapods"
       "swift-format"
       "swiftlint"
-      # "fvm"
+      "fvm"
     ];
 
+    caskArgs.language = "zh-CN";
     casks = [
       "google-chrome"
       "ghostty"
@@ -52,11 +65,6 @@ in {
       "font-fira-code-nerd-font"
       "font-droid-sans-mono-nerd-font"
       "font-hack-nerd-font"
-    ];
-
-    taps = [
-      # "leoafarias/fvm"
-      # "laishulu/macism"
     ];
 
     masApps = {

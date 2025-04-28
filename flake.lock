@@ -87,7 +87,7 @@
         "type": "github"
       }
     },
-    "leoafarias-taps": {
+    "homebrew-fvm": {
       "flake": false,
       "locked": {
         "lastModified": 1724678580,
@@ -262,7 +262,7 @@
         "home-manager": "home-manager",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
-        "leoafarias-taps": "leoafarias-taps",
+        "homebrew-fvm": "homebrew-fvm",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nix-index-database": "nix-index-database",
