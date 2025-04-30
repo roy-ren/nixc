@@ -33,18 +33,20 @@ alias ... = cd ../..
 alias .... = cd ../../..
 alias ..... = cd ../../../..
 
-alias j = z
 alias dl = cd ~/Downloads
 alias dt = cd ~/Desktop
 alias p = cd ~/projects
+alias paas = cd ~/projects/paas/
 
 # ls
+alias l = ls
 alias la = ls -a
-alias l = ls -l
+alias ll = ls -l
 alias lla = ls -la
 alias lt = lsd --tree
 
 # neovim
+alias nv = nvim
 alias vi = nvim
 alias vim = nvim
 
@@ -78,7 +80,7 @@ alias fr = f run --pid-file=/tmp/tf1.pid
 alias frp = f run --pid-file=/tmp/tf1.pid --profile
 
 alias d = fvm dart
-alias dp = dart pub
+alias dp = d pub
 alias dpg = dp get
 
 alias dr = d run

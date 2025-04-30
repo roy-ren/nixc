@@ -50,7 +50,7 @@ in {
       "google-chrome"
       "ghostty"
       "raycast"
-      "rectangle"
+      # "rectangle"
       "proxyman"
       "xcodes"
       "input-source-pro"
