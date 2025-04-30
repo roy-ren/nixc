@@ -1,6 +1,9 @@
 # font
-font-family = "DroidSansM Nerd Font Mono"
+# 汉字支持较好
+font-family = "Maple Mono NF CN"
+# font-family = "Hack Nerd Font Mono"
 # font-family = "FiraCode Nerd Font Mono"
+
 font-size = 14
 adjust-cell-height = 15%
 

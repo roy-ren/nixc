@@ -62,6 +62,9 @@ in {
       "font-fira-code-nerd-font"
       "font-droid-sans-mono-nerd-font"
       "font-hack-nerd-font"
+      "font-source-sans-3"
+      "font-maple-mono-nf"
+      "font-maple-mono-nf-cn"
     ];
 
     masApps = {
