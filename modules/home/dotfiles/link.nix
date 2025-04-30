@@ -7,6 +7,7 @@
     "nushell/aliases.nu".source = link "${dotfiles}/nushell/aliases.nu";
     "nvim".source = link "${dotfiles}/nvim";
     "tmux".source = link "${dotfiles}/tmux";
+    "lazygit".source = link "${dotfiles}/lazygit";
     "starship.toml".source = link "${dotfiles}/starship.toml";
   };
 }
