@@ -1,6 +1,7 @@
 {
-  programs.yazi = {
+  programs. starship = {
     enable = true;
     enableNushellIntegration = true;
+    enableZshIntegration = true;
   };
 }

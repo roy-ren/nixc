@@ -13,8 +13,13 @@ in {
     ./system.nix
   ];
 
-  nix.settings.trusted-users = ["root" me.username];
-  nix.enable = false;
+  nix = {
+    enable = false;
+    settings.trusted-users = [
+      "root"
+      me.username
+    ];
+  };
 
   environment.systemPackages = with pkgs; [nix];
 }

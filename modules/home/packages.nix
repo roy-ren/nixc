@@ -56,12 +56,11 @@
     latex2mathml
     tectonic
     tmux
+    nushell
 
     # swift
     sourcekit-lsp
     # --- LSP>
-    # tmux
-
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
     # less
@@ -108,13 +107,7 @@
     bat.enable = true;
     btop.enable = true;
     fzf.enable = true;
-    # ghostty.enable = true;
-    # tmux.enable = true;
     jq.enable = true;
-    starship = {
-      enable = true;
-      # enableNushellIntegration = true;
-    };
     tmate.enable = true;
     zoxide = {
       enable = true;

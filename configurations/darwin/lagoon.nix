@@ -16,37 +16,27 @@ in {
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.hostName = "lagoon";
 
-  programs.fish.enable = true;
+  environment.shells = [
+    pkgs.bashInteractive
+    pkgs.zsh
+  ];
 
-  # For home-manager to work.
-  # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565487545
+  environment.variables = {
+    XDG_CONFIG_HOME = "${"$HOME"}/.config";
+    XDG_DATA_HOME = "${"$HOME"}/.local/share";
+  };
+
   users.users."${me.username}" = {
     home = "/Users/${me.username}";
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
 
   home-manager = {
-    # Automatically move old dotfiles out of the way
-    #
-    # Note that home-manager is not very smart, if this backup file already exists it
-    # will complain "Existing file .. would be clobbered by backing up". To mitigate this,
-    # we try to use as unique a backup file extension as possible.
     backupFileExtension = "nixos-unified-template-backup";
-
-    # Enable home-manager for our user
     users."${me.username}" = {
       imports = [(self + /configurations/home/${me.username}.nix)];
     };
   };
 
-  environment.shells = [
-    pkgs.bashInteractive
-    pkgs.zsh
-    pkgs.fish
-    pkgs.nushell
-  ];
-
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
   system.stateVersion = 4;
 }
