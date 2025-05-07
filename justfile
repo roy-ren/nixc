@@ -36,7 +36,12 @@ show:
 show-all:
   nix flake show --all-systems
 
-# darwin-rebuild switch --flake ./#lagoon --show-trace
+#lagoon darwin-rebuild switch --flake ./#lagoon --show-trace
 [group('Main')]
-lagoon:
+l:
   darwin-rebuild switch --flake ./#lagoon --show-trace
+
+# nixos-rebuild switch --flake ./#nixpad --show-trace
+[group('Main')]
+p:
+  sudo nixos-rebuild switch --flake ./#nixpad --show-trace
