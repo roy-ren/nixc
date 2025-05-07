@@ -57,6 +57,7 @@ in {
       "chatgpt"
       "shadowsocksx-ng"
       "karabiner-elements"
+      "zen-browser"
       # fonts
       "font-fira-code"
       "font-fira-code-nerd-font"
