@@ -56,6 +56,7 @@
     latex2mathml
     tectonic
     tmux
+    kitty
 
     # swift
     sourcekit-lsp
