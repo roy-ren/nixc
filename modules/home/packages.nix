@@ -56,7 +56,6 @@
     latex2mathml
     tectonic
     tmux
-    nushell
 
     # swift
     sourcekit-lsp
@@ -109,9 +108,5 @@
     fzf.enable = true;
     jq.enable = true;
     tmate.enable = true;
-    zoxide = {
-      enable = true;
-      enableNushellIntegration = true;
-    };
   };
 }

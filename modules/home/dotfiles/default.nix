@@ -7,10 +7,11 @@ in {
     configFile = {
       "tmux".source = link "${dotfiles}/tmux";
       "nvim".source = link "${dotfiles}/nvim";
-      "nushell".source = link "${dotfiles}/nushell";
+      "nushell/custom".source = link "${dotfiles}/nushell/custom";
       "lazygit".source = link "${dotfiles}/lazygit";
       "ghostty".source = link "${dotfiles}/ghostty";
       "starship.toml".source = link "${dotfiles}/starship.toml";
     };
   };
+  home.file.".zshrc".source = link "${dotfiles}/zsh/.zshrc";
 }

@@ -50,14 +50,17 @@ in {
       "google-chrome"
       "ghostty"
       "raycast"
-      # "rectangle"
       "proxyman"
       "xcodes"
       "input-source-pro"
       "chatgpt"
       "shadowsocksx-ng"
       "karabiner-elements"
+
+      # zen browser
+      "zen"
       "zen-browser"
+
       # fonts
       "font-fira-code"
       "font-fira-code-nerd-font"
