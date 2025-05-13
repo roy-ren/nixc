@@ -399,7 +399,8 @@ os:
   open: ""
 
   # Command for opening a link. Should contain "{{link}}".
-  openLink: ""
+  openLink: start {{link}}
+  # openLink: 'nu /Users/roy/.config/lazygit/open-pr.nu'
 
   # CopyToClipboardCmd is the command for copying to clipboard.
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-command-for-copying-to-and-pasting-from-clipboard
@@ -485,7 +486,11 @@ customCommands:
         title: "🔍 请确认提交信息"
         body: "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"
 # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-pull-request-urls
-services: {}
+services: {
+  'gitlab.xiaoman.cc': 'gitlab:gitlab.xiaoman.cc'
+}
+
+# "https://gitlab.xiaoman.cc/royren/paas/merge_requests/new?merge_request%5Bsource_branch%5D=op_flow"
 
 # What to do when opening Lazygit outside of a git repo.
 # - 'prompt': (default) ask whether to initialize a new repo or open in the most recent repo
