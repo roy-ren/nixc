@@ -2,6 +2,7 @@ export def debug-watch [
   --exts: string = 'dart,yaml,json'  # 要监听的扩展名
   --watch_dirs: list<string> = [
     'lib',
+    'assets',
     '../../packages'
   ]  # 要监听的目录
   ...args  # 传给 flutter run 的额外参数
@@ -52,5 +53,5 @@ export def debug-watch [
 
   let watchings = ($watch_dirs | str join "\n📁")
 
-  print $"==============\n✅ Debug-watch Started!\n✅ Pid file: ($pid_path)\n==============\n✅ watching👇👇👇\n==============\n📁($watchings)\n=============="
+  print $"==============\n✅ Debug-watch Started!\n✅ Pid file: ($pid_path)\n==============\n✅ watching👇👇👇\n--------------\n📁($watchings)\n=============="
 }
